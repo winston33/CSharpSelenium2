@@ -5,6 +5,7 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.PhantomJS;
 using NUnit.Framework;
 using System.Drawing;
 using Project.Pages;
@@ -20,7 +21,7 @@ namespace Tests
         [SetUp]
         public void SetupTest()
         {
-            Driver = new InternetExplorerDriver();
+            Driver = new PhantomJSDriver();
             
         }
 
