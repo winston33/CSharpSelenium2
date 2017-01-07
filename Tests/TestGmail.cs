@@ -22,8 +22,10 @@ namespace Tests
         [SetUp]
         public void SetupTest()
         {
-            Driver = new PhantomJSDriver();
-            
+            //Driver = new PhantomJSDriver();
+            //Driver = new RemoteWebDriver(new Uri ("http://localhost:4444/wd/hub"), DesiredCapabilities.HtmlUnit());
+            Driver = new InternetExplorerDriver();
+
         }
 
         [Test]
@@ -61,6 +63,7 @@ namespace Tests
                 string msg = "Page with title Gogle is not found";
                 GmailPage.takescreenshot("gogle.gif");
                 throw new NoSuchWindowException(msg);
+                
 
             }
         }
